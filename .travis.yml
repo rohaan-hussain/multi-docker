@@ -13,12 +13,12 @@ script:
 after_success:
   - docker build -t syedrohaan/multi-client ./client
   - docker build -t syedrohaan/multi-nginx ./nginx
-  - docker build -t syedrohaan/muti-server ./server
+  - docker build -t syedrohaan/multi-server ./server
   - docker build -t syedrohaan/multi-worker ./worker
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   - docker push syedrohaan/multi-client
   - docker push syedrohaan/multi-nginx
-  - docker push syedrohaan/muti-server
+  - docker push syedrohaan/multi-server
   - docker push syedrohaan/multi-worker
