@@ -34,3 +34,9 @@ deploy:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
+
+
+
+
+git -c http.extraheader="AUTHORIZATION: Basic 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" clone https://github.com/agoda-com/Janus.git
+
